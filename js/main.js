@@ -1,3 +1,4 @@
+'use strict';
 const btn = document.querySelector('.btn');
 const select = document.querySelector('.select');
 const amount = document.querySelector('.amount');
@@ -14,13 +15,14 @@ function reset() {
   message.innerHTML = '¡Vamos a jugar!';
   btnReset.classList.add('noDisplay');
   btn.disabled = false;
+  select.value = '';
+  amount.value = '';
 }
 
-function handleClick(ev) {
+function feedbackPrint() {
   const selected = parseInt(select.value);
   const randomNumber = getRandomNumber(6);
   const tAmount = parseInt(amount.value);
-
   if (typeof selected === 'number' && tAmount > 0) {
     if (randomNumber === selected) {
       accEuros += tAmount * 2;
@@ -34,10 +36,15 @@ function handleClick(ev) {
   } else {
     message.innerHTML = 'Introduce un importe válido';
   }
+}
+
+function handleClick(ev) {
+  feedbackPrint();
+
   if (accEuros >= 200) {
     message.innerHTML = 'Ha ganado la Usuaria';
     btnReset.classList.remove('noDisplay');
-    btn.disabled = true
+    btn.disabled = true;
   } else if (accEuros <= 0) {
     message.innerHTML = 'Ha ganado la Computadora';
     btnReset.classList.remove('noDisplay');
