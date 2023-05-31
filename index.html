@@ -10,25 +10,26 @@
 <body>
   <main>
     <section class="gameBoard">
-      <h1 class="title">Dados y Apuestas</h1>
+      <h1 class="title">🎲Dados y Apuestas🎲</h1>
       <p class="subtitle">Introduce aquí tu jugada</p>
-
-        <select class="select" name="select" id="select">
-          <option value =""selected="true" disabled="disabled">Que número apuestas del 1 al 6</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-        </select>
-        <input class="amount"type="text"placeholder="¿Cuánto apuestas?">
-        <button class="btn">Jugar</button>
-
+        <form class="form" action="">
+          <select class="select" name="select" id="select" required>
+            <option value ="" selected="true" disabled="disabled">Que número apuestas del 1 al 6</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <input class="amount"type="text"placeholder="¿Cuánto apuestas?" required>
+          <button type ="submit" class="btn">Jugar</button>
+        </form>
       <div class="result">
         <span class="message">¡Vamos a jugar!</span>
         <span class="remainingAmount">Saldo: 50</span>
         <button class="btnReset noDisplay">Reinicia</button>
+        <img class = "img" href ="" >
       </div>
     </section>
   </main>
