@@ -1,30 +1,33 @@
-const updateBtn = document.querySelector('.update')
-const result = document.querySelector('.result');
-const selection = document.querySelector('.selection');
-const body = document.querySelector('.body');
+const btn = document.querySelector('.btn');
+const select = document.querySelector('.select');
+const amount = document.querySelector('.amount');
+const message = document.querySelector('.message');
+const remainingAmount = document.querySelector('.remainingAmount');
 
 
+let accEuros = 50
 
-function randomColor () {
-  const nRandom = random()
-  if(nRandom % 2 === 0) {
-    body.classList.remove('randomColorOdd');
-    body.classList.add('randomColorEven')
+function handleClick(ev) {
+  const selected = parseInt(select.value);
+  const randomNumber = getRandomNumber(6);
+  const tAmount = amount.value;
+  console.log(selected)
+  console.log(randomNumber)
+  if(randomNumber === selected) {
+    accEuros+=(tAmount * 2)
+    message.innerHTML = 'Has ganado el doble de lo apostado 😀';
+    remainingAmount.textContent = `Saldo: ${accEuros}`
+  } else {
+    accEuros = accEuros - tAmount;
+    message.innerHTML = 'Has perdido lo apostado 😞';
+    remainingAmount.textContent = `Saldo: ${accEuros}`;
+  }
 
-  } else{
-    body.classList.remove('randomColorEven');
-    body.classList.add('randomColorOdd');
-  } 
-}
-function printSelection (ev) {
-  const selected = selection.value
-  result.innerHTML= selected
-   randomColor();
 }
 //Math.round(Math.random()*100)
-function random() {
-  return parseInt(Math.random()*100);
+function getRandomNumber(max) {
+  return Math.ceil(Math.random()*max);
 }
 
 
-updateBtn.addEventListener('click',printSelection)
+btn.addEventListener('click', handleClick);
