@@ -1,42 +1,60 @@
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing:border-box;
+  box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+body {
+  background: linear-gradient(90deg, #d770b2, #e4ad7a);
+}
 .gameBoard {
-  width : 600px;
-  margin:auto;
+  width: 600px;
+  margin: auto;
   text-align: center;
-  background-color:#f0d472 ;
+  background-color: #f0d472;
   border-radius: 15px;
-  box-shadow: -25px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+  box-shadow: -25px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 .title {
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-margin-top: 60px;
-margin-bottom: 20px;
-padding-top: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  padding-top: 60px;
 }
 .subtitle {
   margin-bottom: 40px;
 }
+select {
+  border-radius: 15px;
+  height: 30px;
+  padding: 0 15px;
+  text-align: left;
+  border:none;
+}
 
+input {
+  border-radius: 15px;
+  height: 30px;
+  text-align: center;
+  border:none;
+}
 
 .btn {
   padding-left: 15px;
   padding-right: 15px;
-  background-color: rgb(38, 176, 130);
-  border:2px solid grey;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 18px;
-  color:white;
-  border-radius:5px;
-  
+  height: 30px;
+  background-color: #af5793;
+  border: 2px solid grey;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: white;
+  border-radius: 15px;
 }
-.btn:hover{
-  background-color: #9a407e;
+.btn:hover {
+  background-color: #d88fc1;
 }
 .result {
   display: flex;
@@ -49,22 +67,32 @@ padding-top: 20px;
   margin-bottom: 10px;
   font-weight: bold;
 }
-.remainingAmount{
+.remainingAmount {
   padding-bottom: 40px;
 }
 
-.noDisplay{
+.noDisplay {
   display: none;
 }
 
 .btnReset {
   width: 100px;
   height: 50px;
-  margin-top: 40px;
-  background-color: rgb(229, 123, 18);
-  border:2px solid grey;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+  background-color: #e4ad7a;
+  border: 2px solid grey;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 18px;
-  color:white;
+  color: white;
   border-radius: 10px;
+}
+.btnReset:hover {
+  background-color: #d88fc1;
+}
+.img {
+  margin-bottom: 60px;
+  border-radius: 15px;
+  width: 400px;
+
 }

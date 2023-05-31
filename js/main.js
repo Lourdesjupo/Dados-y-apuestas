@@ -39,6 +39,7 @@ function reset() {
   btn.disabled = false;
   select.selectedIndex = 0;
   amount.value = '';
+  img.src = '';
 }
 
 function feedbackPrint(resultBet) {
